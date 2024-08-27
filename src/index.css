@@ -14,3 +14,16 @@ body {
 main {
   margin-top: 50px;
 }
+
+button {
+  background-color: unset;
+  border: unset;
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.mt {
+  margin-top: 30px;
+}
