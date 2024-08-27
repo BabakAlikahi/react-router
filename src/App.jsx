@@ -8,13 +8,13 @@ import ProductDetailPage from "./pages/ProductDetailPage";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/root",
     element: <RoutLayout />,
     errorElement: <ErrorPage />,
     children: [
-      { path: "/", element: <HomePage /> },
-      { path: "/products", element: <ProductsPage /> },
-      { path: "/products/:productId", element: <ProductDetailPage /> },
+      { path: "", element: <HomePage /> },
+      { path: "products", element: <ProductsPage /> },
+      { path: "products/:productId", element: <ProductDetailPage /> },
     ],
   },
 ]);

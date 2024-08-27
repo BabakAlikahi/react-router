@@ -7,12 +7,12 @@ function MainNavigation() {
       <nav>
         <ul>
           <li>
-            <NavLink to={"/"} className={({ isActive }) => (isActive ? classes.active : undefined)} end>
+            <NavLink to={"/root"} className={({ isActive }) => (isActive ? classes.active : undefined)} end>
               Home Page
             </NavLink>
           </li>
           <li>
-            <NavLink to={"/products"} className={({ isActive }) => (isActive ? classes.active : undefined)}>
+            <NavLink to={"products"} className={({ isActive }) => (isActive ? classes.active : undefined)}>
               Products Page
             </NavLink>
           </li>

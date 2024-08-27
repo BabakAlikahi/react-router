@@ -5,7 +5,7 @@ function HomePage() {
   const navigate = useNavigate();
 
   function handleNavigate() {
-    navigate("/products");
+    navigate("products");
   }
 
   return (

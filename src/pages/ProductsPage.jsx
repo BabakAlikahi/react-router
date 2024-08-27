@@ -17,7 +17,7 @@ function ProductsPage() {
           {DUMMY_PRODUCTS.map((product)=>(
           <li key={product.id}>
             <h3>
-              <Link to={`/products/${product.id}`}>this is {product.title}</Link>
+              <Link to={product.id}>this is {product.title}</Link>
             </h3>
           </li>
 
