@@ -3,10 +3,10 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import ErrorPage from "./pages/ErrorPage";
 import RootLayout from "./pages/RootLayout";
-import NewEventPage from "./pages/NewEventPage";
 import EditEventPage from "./pages/EditEventPage";
 import EventsRootLayout from "./pages/EventsRootLayout";
 import EventsPage, { eventsLoader } from "./pages/EventsPage";
+import NewEventPage, { NewEventAction } from "./pages/NewEventPage";
 import EventDetailPage, { eventDetailLoader } from "./pages/EventDetailPage";
 
 function App() {
@@ -31,16 +31,24 @@ function App() {
             },
             {
               path: ":eventId",
-              element: <EventDetailPage />,
+              id: "event-detail",
               loader: eventDetailLoader,
+              children: [
+                {
+                  index: true,
+                  element: <EventDetailPage />,
+                },
+                {
+                  path: "edit",
+                  element: <EditEventPage />,
+                },
+              ],
             },
+
             {
               path: "new",
+              action: NewEventAction,
               element: <NewEventPage />,
-            },
-            {
-              path: ":eventId/edit",
-              element: <EditEventPage />,
             },
           ],
         },
